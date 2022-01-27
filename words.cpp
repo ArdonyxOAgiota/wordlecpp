@@ -20,6 +20,5 @@ int main(){
 			cout << "Resposta correta!" << '\n';
 		}
 	}
-	cout << resposta << '\n';
 	return 0;
 }
