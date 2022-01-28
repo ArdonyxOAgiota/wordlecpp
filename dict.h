@@ -1,4 +1,5 @@
 #include <iostream>
+
 std::string dict[] = {
 "Bisca",
 "Amena",
