@@ -30,7 +30,7 @@ int main(){
 		cout << "A resposta só tem 5 caracteres" << '\n';
 	}
 	else{
-                resposta != word ? std::cout << "Resposta errada!" << "A resposta certa é: " << word << '\n' : std::cout << "Resposta correta!" << '\n';
+                resposta != word ? std::cout << "Resposta errada! " << "A resposta certa é: " << word << '\n' : std::cout << "Resposta correta!" << '\n';
 
 	}
 	return 0;
