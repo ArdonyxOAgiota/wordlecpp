@@ -1,17 +1,17 @@
 #include "dict.h"
 #include "funcs.h"
 #include <iostream>
-using namespace std;
 
 
 int main(){
         loop();
         if(tentativas >= tmax){
-                cout << "GAME OVER" << '\n';
-                cout << "1- Reiniciar jogo" << '\n';
-                cout << "2- Sair do jogo" << '\n';
-                cout << ">> ";
-                cin >> resp;
+                std::cout << "A resposta era: " << word << '\n';
+                std::cout << "GAME OVER" << '\n';
+                std::cout << "1- Reiniciar jogo" << '\n';
+                std::cout << "2- Sair do jogo" << '\n';
+                std::cout << ">> ";
+                std::cin >> resp;
                 if(resp == 2){
                         abort();
                 }
