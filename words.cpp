@@ -20,10 +20,13 @@ std::string palavra(int num)
 }
 
 int main(){
+  int tentativas, tmax;
+  tmax = 5;
+  tentativas = 0;
   string resposta, word;
   word = palavra(random_num());
 	cout << "Olá, tente adivinhar qual é a palavra certa. Dica: A palavra tem 5 caracteres" << '\n';
-	cout << ">>\t";
+	cout << ">> ";
 	cin >> resposta;
 	
 	if( resposta.size() > 5 ){
@@ -31,12 +34,35 @@ int main(){
 	}
 	else{
 	  if( resposta !=  word){
-		cout << "Resposta errada!" << "A resposta certa é: " << word << '\n';
+		cout << "Resposta errada!" << '\n';
+		tentativas = tentativas + 1;
+		cout << tentativas << '\n';
 		}
 		else{
 			cout << "Resposta correta!" << '\n';
 		}
 	}
+	while(tentativas < tmax){
+	printf(">> ");
+	cin >> resposta;
+		if(resposta != word){
+		printf("Resposta errada!\n");
+		tentativas = tentativas + 1;
+		}
+	}
+	if(tentativas >= tmax){
+	cout << "GAME OVER" << '\n';
+	int resp;
+	cout << "1- Reiniciar jogo" << '\n';
+	cout << "2- Sair do jogo" << '\n';
+	cout << ">> ";
+	cin >> resp;
+	if(resp = 2){
+		abort();
+		}
+	else if(resp = 1){
+		main();	
+		}
+	}
 	return 0;
 }
-
