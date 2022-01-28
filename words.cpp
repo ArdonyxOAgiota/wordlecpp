@@ -35,7 +35,7 @@ int main(){
 	else{
 	  if( resposta !=  word){
 		cout << "Resposta errada!" << '\n';
-		tentativas = tentativas + 1;
+		tentativas++;
 		cout << tentativas << '\n';
 		}
 		else{
@@ -47,7 +47,7 @@ int main(){
 	cin >> resposta;
 		if(resposta != word){
 		printf("Resposta errada!\n");
-		tentativas = tentativas + 1;
+		tentativas++;
 		}
 	}
 	if(tentativas >= tmax){
