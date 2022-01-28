@@ -1,20 +1,37 @@
+#include "dict.h"
+#include <stdlib.h>
+#include <time.h>
 #include <iostream>
 using namespace std;
 
+// Gera o numero aleatorio
+int random_num()
+{
+  int len = sizeof(dict)/sizeof(dict[0]);
+  std::srand(time(0));
+  int num = rand() % len;
+  return num;
+}
+// Retorna uma palavra aleatória do dicionário baseada no numero aleatório
+std::string palavra(int num)
+{
+  std::string word = dict[num];
+  return word;
+}
+
 int main(){
-	string resposta;
+  string resposta, word;
+  word = palavra(random_num());
 	cout << "Olá, tente adivinhar qual é a palavra certa. Dica: A palavra tem 5 caracteres" << '\n';
-	cout << ">> ";
-	//Criando um local pro usuario digitar
+	cout << ">>\t";
 	cin >> resposta;
-	//Checando se a resposta tem mais de 5 caracteres
+	
 	if( resposta.size() > 5 ){
 		cout << "A resposta só tem 5 caracteres" << '\n';
 	}
 	else{
-		//Checando se a resposta está errada
-		if( resposta != "zebra" ){
-			cout << "Resposta errada!" << '\n';
+	  if( resposta !=  word){
+		cout << "Resposta errada!" << "A resposta certa é: " << word << '\n';
 		}
 		else{
 			cout << "Resposta correta!" << '\n';
@@ -22,3 +39,4 @@ int main(){
 	}
 	return 0;
 }
+
