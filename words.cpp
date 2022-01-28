@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+unsigned short int cont = 0;
+
 // Gera o numero aleatorio
 int random_num()
 {
@@ -34,12 +36,13 @@ int main(){
 	}
 	else{
 	  if( resposta !=  word){
-		cout << "Resposta errada!" << '\n';
+		cout << "Resposta errada! Pontuação: " << cont << '\n';
 		tentativas++;
 		cout << tentativas << '\n';
 		}
 		else{
-			cout << "Resposta correta!" << '\n';
+                        cont++;
+			cout << "Resposta correta! Pontuação: "<< cont << '\n';
 		}
 	}
 	while(tentativas < tmax){
