@@ -30,8 +30,8 @@ void loop()
         std::cin >> resposta;
         tmax = 5;
         tentativas = 0;
-        if( resposta.size() > 5 ){
-                std::cout << "A resposta só tem 5 caracteres" << '\n';
+        if( resposta.size() != 5 ){
+                std::cout << "A resposta contém somente 5 caracteres" << '\n';
         }
         else{
                 if( resposta !=  word){
