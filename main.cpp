@@ -6,12 +6,6 @@ int main(){
 	int num = rand() % 39; 
 	std::string plvr = dict[num];
 	char pala[6];
-	pala[0] = plvr[0];
-	pala[1] = plvr[1];
-	pala[2] = plvr[2];
-	pala[3] = plvr[3];
-	pala[4] = plvr[4];
-	pala[5] = plvr[5];
 	char anwser[6];
 	std::cin.getline(anwser, 6);
 	char *ptr;
